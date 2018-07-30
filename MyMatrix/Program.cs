@@ -10,16 +10,13 @@ namespace MyMatrix
     {
         static void Main(string[] args)
         {
-
-            
-            Console.WriteLine("Inpu n m (size matrix)");
-            int n, m;
-            n = Convert.ToInt32(Console.ReadLine());
-            m = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"n={n} m={m}");
-            Matrix A = new Matrix(n, m);
-            A.InputM();
+            Matrix A = new Matrix(3, 3);
+            Matrix B = new Matrix(3, 3);
             A.OutputM();
+            B.OutputM();
+            A = A + B;
+            A.OutputM();
+
             Console.ReadKey();
         }
     }
